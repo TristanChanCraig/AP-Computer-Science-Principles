@@ -2,7 +2,7 @@
 
 **AP Computer Science Principles 2023-2024**
 
-FirstName LastName
+Tristan Chan
 
 <!-- This is a comment (which will not be displayed in the live file);
 replace all "???" with your own text. -->
@@ -65,21 +65,44 @@ ___
 
 # 1. Compiling and Running
 
-???
+To run a C++ program, you would need to do compile it first.
 
+Ex:
 
+```c++
+$ g++ -o </insert-name/>.java
+```
 
+After compiling the file, you can now run it.
 
+Ex:
 
+```c++
+$ ./</insert-name/>
+```
+
+Replace </insert-name/> with the file name
 ___
-
-
-
-
 
 # 2. Data Types
 
-???
+There are seven basic C++ data types that are often used while coding.
+
+* `bool` (Boolean) - either `True` (1) or `False` (0)
+* `char` (Character) - A single keyboard character that can take 256 values corresponding to the ASCII table (1 byte)
+* `int` (Integer) - A whole number from -2^31 to 2^31-1 (4 bytes)
+* `float` (Floating point) - A number with a decimal from 1.175494351E-38 to 3.402823466E+38 (4 bytes)
+* `double` (Double floating point) - A number with a decimal from 2.2250738585072014E-308 to 7976931348623158E+308 (8 bytes)
+* `void` (Valueless) - No value or a memory address holder, usually to name a function that doesnt return anything (0 - 8 bytes)
+* `wchar_t` (Wide character) - A single keyboard character that can take 65536 values corresponding to the ASCII table (2/4 bytes)
+
+C++ also include type modifiers which can limit or expand types to certain parameters.
+
+* `signed` - The type can be negative or positive
+* `unsigned` - The type can never be negative
+* `short`
+* `long`
+
 
 ```LANGUAGE_HERE
 
