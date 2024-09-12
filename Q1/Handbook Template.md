@@ -53,16 +53,7 @@ ___
 - [24. Common Data Structures](#24-common-data-structures)
 - [25. Advanced Language Features](#25-advanced-language-features)
 -->
-
-
-
-
 ___
-
-
-
-
-
 # 1. Compiling and Running
 
 To run a C++ program, you would need to do compile it first.
@@ -83,7 +74,6 @@ $ ./</insert-name/>
 
 Replace </insert-name/> with the file name
 ___
-
 # 2. Data Types
 
 There are seven basic C++ data types that are often used while coding.
@@ -102,80 +92,77 @@ C++ also include type modifiers which can limit or expand types (usually ints) t
 * `unsigned` - The type can never be negative
 * `short` - Uses half the bytes but also shortens the parameters by a lot
 * `long` - Uses double the bytes and greatly expands the parameters
-
+* `const` - Prevents the programmer from modifying the variable and stays the same
 
 ```C++
 long int low = -9223372036854775808
 long int high = 9223372036854775807
 // The lowest and highest you can go in a long int 
 ```
-
-
-
-
-
 ___
-
-
-
-
-
 # 3. Console I/O
 
-???
+There are two seperate functions for console input and output.
 
+* `printf(...)` - Normal function to print to the console
+* `scanf("</FormatSpecifier/>", </VariableName/>)` - Normal function to take input from the console and turn it into a variable
 
+Note that to do both, you would have to include <stdio.h> into your code from C.
 
+Otherwise, you can use the normal C++ functions that look a bit weird to use but can be used without including any packages.
 
-
+* `std::cout << ...` - Normal function to print to the console in C++
+* `std::cout << ... << endl` - Normal function to print with a line break to the console in C++
 ___
-
-
-
-
-
 # 4. Arithmetic Operations
 
-???
+* `+` - Add
+* `-` - Subtract
+* `*` - Multiply
+* `/` - Divide
+* `%` - Modulus (Remainder from long division)
 
+## 4.1 Type Casting
+There are two type of ways to change a type from one to another in C++.
 
+* Implicit - The compiler does it automatically when it is possible
+* Explicit - Done manually by using five types of cast operators
+  * static_cast - A compile-time casting operator usually used for a variety of conversions
+  
+  Ex: 
+  ```C++
+  double doubleVariable = static_cast<double>(intVariable);
+  ```
 
+  * dynamic_cast - Used for downcasting polymorphic base classes
+  * const_cast - Used to remove the const type from variables
 
+  Ex:
+  ```C++
+  int& notConstValue = const_cast<int&>(constValue);
+  ```
+  * reinterpret_cast - A very unsafe way to convert a pointer or memory address of one type to the same pointer of another type
+  * C-style type casting - A traditional method from C to convert data types
 
+  Ex:
+  ```C++
+  int intValue = (int)doubleValue;
+  ```
 ___
-
-
-
-
-
 # 5. Assignment Operations
 
-???
-
-
-
-
-
+* `x = y` - Set x equal to y
+* `x += y` - Add y to x (`x = x + y`)
+* `x -= y` - Subtract y from x (`x = x - y`)
+* `x *= y` - Multiply y and x (`x = x * y`)
+* `x /= y` - Divide x with y (`x = x + y`)
+* `x %= y` - Mod x with y (`x = x % y`)
 ___
-
-
-
-
-
 # 6. Comments
 
-???
-
-
-
-
-
+* `// ...` - A single line comment
+* `/* ... */` - A multi-line comment
 ___
-
-
-
-
-
 # 7. Decision Structures
 
 ???
