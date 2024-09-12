@@ -96,16 +96,18 @@ There are seven basic C++ data types that are often used while coding.
 * `void` (Valueless) - No value or a memory address holder, usually to name a function that doesnt return anything (0 - 8 bytes)
 * `wchar_t` (Wide character) - A single keyboard character that can take 65536 values corresponding to the ASCII table (2/4 bytes)
 
-C++ also include type modifiers which can limit or expand types to certain parameters.
+C++ also include type modifiers which can limit or expand types (usually ints) to certain parameters.
 
 * `signed` - The type can be negative or positive
 * `unsigned` - The type can never be negative
-* `short`
-* `long`
+* `short` - Uses half the bytes but also shortens the parameters by a lot
+* `long` - Uses double the bytes and greatly expands the parameters
 
 
-```LANGUAGE_HERE
-
+```C++
+long int low = -9223372036854775808
+long int high = 9223372036854775807
+// The lowest and highest you can go in a long int 
 ```
 
 
