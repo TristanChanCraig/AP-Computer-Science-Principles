@@ -165,54 +165,31 @@ ___
 ___
 # 7. Decision Structures
 
-???
+* if statements
+* if...else statements
 
-
-
-
-
+These statements can also be nested within each other or use more than one within another.
 ___
-
-
-
-
-
 # 8. Conditional Operators
 
-???
-
-
-
-
-
+* `==` - Equal to
+* `!=` - Not equal to
+* `>` - Greater than
+* `<` - Less than
+* `>=` - Greater than or equal to
+* `<=` - Less than or equal to
 ___
-
-
-
-
 
 # 9. Logic Operators
 
-???
-
-
-
-
-
+* `&&` - Both are true
+* `||` - Either is true
+* `!` - Reverses result
 ___
-
-
-
-
-
 # 10. Advanced Decision Structures
 
-???
-
-
-
-
-
+* switch statements
+* ternary statements
 ___
 
 
