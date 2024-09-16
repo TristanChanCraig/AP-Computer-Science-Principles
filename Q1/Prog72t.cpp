@@ -16,7 +16,18 @@ int main() {
 
     int m = 0;
     int h = 0;
-
+    if (first > sec) {
+        h += (2400 - first) / 100;
+        first = (2400 - first) % 100;
+        // TODO: Fix first time somehow
+        printf("%d\n", h);
+        h += first / 60;
+        printf("%d\n", h);
+        m += first;
+        printf("%d\n", m);
+        first = 0;
+        time = abs(first - sec);
+    } else {
     while (time > 99) {
          time -= 100;
          h += 1;
@@ -29,7 +40,7 @@ int main() {
         time -= 1;
         m += 1;
     }
-    
+    }
     printf("The difference between the two times is %d hours and %d minutes.", h, m);
 }
 /*
