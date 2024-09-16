@@ -188,14 +188,9 @@ ___
 ___
 # 10. Advanced Decision Structures
 
-* switch statements
-* ternary statements
+* ``switch``
+* ``?:`` - Ternary operator (condition ? statement1 : statement 2)
 ___
-
-
-
-
-
 # 11. String Methods
 
 ???
