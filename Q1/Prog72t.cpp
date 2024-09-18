@@ -17,16 +17,22 @@ int main() {
     int m = 0;
     int h = 0;
     if (first > sec) {
+        if (first % 100 != 0) {
+            m += first % 100;
+            first -= first % 100;
+        }
         h += (2400 - first) / 100;
         first = (2400 - first) % 100;
         // TODO: Fix first time somehow
-        printf("%d\n", h);
         h += first / 60;
-        printf("%d\n", h);
+        first %= 60;
         m += first;
-        printf("%d\n", m);
-        first = 0;
-        time = abs(first - sec);
+
+        h += sec / 100;
+        sec /= 100;
+        h += sec / 60;
+        sec /= 100;
+        m += sec;
     } else {
     while (time > 99) {
          time -= 100;
@@ -47,4 +53,8 @@ int main() {
 Enter the first time: 900
 Enter the second time: 1730
 The difference between the two times is 8 hours and 30 minutes
+
+Enter the first time: 1730
+Enter the second time: 900
+The difference between the two times is 16 hours and 30 minutes.
 */
