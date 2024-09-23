@@ -22,5 +22,5 @@ int main() {
 }
 /*
 Enter the number: 10
-The number of integers between 1 and 10, inclusive, is 4
+The number of prime integers between 1 and 10, inclusive, is 4
 */
