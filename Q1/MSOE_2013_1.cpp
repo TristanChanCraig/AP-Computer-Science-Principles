@@ -4,21 +4,28 @@
 using namespace std;
 
 int main() {
-    int r1;
+    double r1;
     printf("Enter the first resistance: ");
-    scanf("%d", &r1);
+    scanf("%lf", &r1);
 
-    int r2;
+    double r2;
     printf("Enter the second resistance: ");
-    scanf("%d", &r2);
+    scanf("%lf", &r2);
 
-    int r3;
+    double r3;
     printf("Enter the third resistance: ");
-    scanf("%d", &r3);
+    scanf("%lf", &r3);
 
-    int v;
+    double v;
     printf("Enter the voltage: ");
-    scanf("%d", &r3);
+    scanf("%lf", &r3);
 
-    
+    double c1, c2, c3, r;
+    c1 = v / r1;
+    c2 = v / r2;
+    c3 = v / r3;
+    r = 5 / (c1 + c2 + c3);
+
+    printf("The currents are %.2f, %.2f, and %.2f\n", c1, c2, c3);
+    printf("The resistance is %.2f", r);
 }
