@@ -27,31 +27,32 @@ ___
 - [7. Decision Structures](#7-decision-structures)
 - [8. Conditional Operators](#8-conditional-operators)
 - [9. Logic Operators](#9-logic-operators)
-- [10. Advanced Decision Structures](#10-advanced-decision-structures)
-- [11. String Methods](#11-string-methods)
-- [12. Random Generation](#12-random-generation)
-- [13. Looping Structures](#13-looping-structures)
-- [14. Functions/Methods](#14-functionsmethods)
-- [15. Elementary Data Structures](#15-elementary-data-structures)
-  - [15.1 Arrays/Lists](#151-arrayslists)
-  - [15.2 Matrices](#152-matrices)
+- [10. Bitwise Operators](#10-bitwise-operators)
+- [11. Advanced Decision Structures](#11-advanced-decision-structures)
+- [12. String Methods](#12-string-methods)
+- [13. Random Generation](#13-random-generation)
+- [14. Looping Structures](#14-looping-structures)
+- [15. Functions/Methods](#15-functionsmethods)
+- [16. Elementary Data Structures](#16-elementary-data-structures)
+  - [16.1 Arrays/Lists](#161-arrayslists)
+  - [16.2 Matrices](#162-matrices)
 - [References](#references)
 
 <!-- 
-- [16. Major Keywords](#16-major-keywords)
-- [17. Error Handling](#17-error-handling)
-- [18. Working with Files](#18-working-with-files)
-- [19. Major Language Features](#19-major-language-features)
-  - [19.1 Classes](#191-classes)
-  - [19.2 Inheritance](#192-inheritance)
-  - [19.3 Generic Typing (Templates)](#193-generic-typing-templates)
-  - [19.4 Pointers](#194-pointers)
-- [20. Importing Local Libraries](#20-importing-local-libraries)
-- [21. Working with Time](#21-working-with-time)
-- [22. Importing Libaries from Package managers](#22-importing-libaries-from-package-managers)
-- [23. Bitwise Operators](#23-bitwise-operators)
-- [24. Common Data Structures](#24-common-data-structures)
-- [25. Advanced Language Features](#25-advanced-language-features)
+- [17. Major Keywords](#17-major-keywords)
+- [18. Error Handling](#18-error-handling)
+- [19. Working with Files](#19-working-with-files)
+- [20. Major Language Features](#20-major-language-features)
+  - [20.1 Classes](#191-classes)
+  - [20.2 Inheritance](#202-inheritance)
+  - [20.3 Generic Typing (Templates)](#203-generic-typing-templates)
+  - [20.4 Pointers](#194-pointers)
+- [21. Importing Local Libraries](#21-importing-local-libraries)
+- [22. Working with Time](#22-working-with-time)
+- [23. Importing Libaries from Package managers](#23-importing-libaries-from-package-managers)
+- [24. Bitwise Operators](#24-bitwise-operators)
+- [25. Common Data Structures](#25-common-data-structures)
+- [26. Advanced Language Features](#26-advanced-language-features)
 -->
 ___
 # 1. Compiling and Running
@@ -162,6 +163,23 @@ ___
 
 * `// ...` - A single line comment
 * `/* ... */` - A multi-line comment
+
+```C++
+// line comment
+
+/* block
+comment
+across
+multiple lines
+*/
+
+/* Properly
+ * formatted
+ * block
+ * comment
+ * usually for metadata (author, date, etc.)
+ */
+```
 ___
 # 7. Decision Structures
 
@@ -185,13 +203,59 @@ ___
 * `&&` - Both are true
 * `||` - Either is true
 * `!` - Reverses result
+
 ___
-# 10. Advanced Decision Structures
+# 10. Bitwise Operators
+
+* `&` - Bitwise AND
+* `|` - Bitwise OR
+* `^` - Bitwise XOR
+* `~` - Bitwise NOT
+* `<<` - Bitwise shift left
+* `>>` - Bitwise shift right
+___
+# 11. Advanced Decision Structures
 
 * ``switch``
 * ``?:`` - Ternary operator (condition ? statement1 : statement 2)
 ___
-# 11. String Methods
+# 12. String Methods
+
+* ``length() or size()`` - Returns the length of the string
+* ``at()`` - Accesses a character at an index
+* ``append()`` - Adds one string to the end of another
+* ``compare()`` - Returns an integer valur based on the result of comparison
+* ``substr()`` - Takes a substring from a string
+* ``find()`` - Returns the position of the first occurrence of a substring
+* ``replace()`` - Replaces a substring of a string with another substring
+* ``insert()`` - Adds a substring at a specified position
+* ``erase()`` - Removes a substring in a string
+* ``c_str()`` - Grabs a C-style string from an std::string
+
+
+___
+
+
+
+
+
+# 13. Random Generation
+
+* ``
+
+Note that you will have to include the C standard library to use the both random functions.
+
+```C++
+#include <cstdlib>
+```
+
+___
+
+
+
+
+
+# 14. Looping Structures
 
 ???
 
@@ -205,7 +269,7 @@ ___
 
 
 
-# 12. Random Generation
+# 15. Functions/Methods
 
 ???
 
@@ -219,7 +283,7 @@ ___
 
 
 
-# 13. Looping Structures
+# 16. Elementary Data Structures
 
 ???
 
@@ -227,35 +291,7 @@ ___
 
 
 
-___
-
-
-
-
-
-# 14. Functions/Methods
-
-???
-
-
-
-
-
-___
-
-
-
-
-
-# 15. Elementary Data Structures
-
-???
-
-
-
-
-
-## 15.1 Arrays/Lists
+## 16.1 Arrays/Lists
 
 ???
 
@@ -264,7 +300,7 @@ ___
 
 
 
-## 15.2 Matrices
+## 16.2 Matrices
 
 ???
 
@@ -286,7 +322,7 @@ UNCOMMENT BY REMOVING THE ARROW TAGS SURROUNDING
 CHANGE THE SECTION NUMBERS AS DESIRED
 -->
 
-<!-- # 16. Major Keywords
+<!-- # 17. Major Keywords
 
 ???
 
@@ -300,7 +336,7 @@ ___ -->
 
 
 
-<!-- # 17. Error Handling
+<!-- # 18. Error Handling
 
 ???
 
@@ -314,7 +350,7 @@ ___ -->
 
 
 
-<!-- # 18. Working with Files
+<!-- # 19. Working with Files
 
 ???
 
@@ -328,7 +364,7 @@ ___ -->
 
 
 
-<!-- # 19. Major Language Features
+<!-- # 20. Major Language Features
 
 ???
 
@@ -338,7 +374,7 @@ ___ -->
 
 
 
-## 19.1 Classes
+## 20.1 Classes
 
 ???
 
@@ -346,7 +382,7 @@ ___ -->
 
 
 
-## 19.2 Inheritance
+## 20.2 Inheritance
 
 ???
 
@@ -354,7 +390,7 @@ ___ -->
 
 
 
-## 19.3 Generic Typing (Templates)
+## 20.3 Generic Typing (Templates)
 
 ???
 
@@ -362,21 +398,7 @@ ___ -->
 
 
 
-## 19.4 Pointers
-
-???
-
-
-
-
-
-___ -->
-
-
-
-
-
-<!-- # 20. Importing Local Libraries
+## 20.4 Pointers
 
 ???
 
@@ -390,7 +412,7 @@ ___ -->
 
 
 
-<!-- # 21. Working with Time
+<!-- # 21. Importing Local Libraries
 
 ???
 
@@ -404,7 +426,7 @@ ___ -->
 
 
 
-<!-- # 22. Importing Libaries from Package managers
+<!-- # 22. Working with Time
 
 ???
 
@@ -418,7 +440,7 @@ ___ -->
 
 
 
-<!-- # 23. Bitwise Operators
+<!-- # 23. Importing Libaries from Package managers
 
 ???
 
@@ -432,7 +454,7 @@ ___ -->
 
 
 
-<!-- # 24. Common Data Structures
+<!-- # 24. Bitwise Operators
 
 ???
 
@@ -446,7 +468,21 @@ ___ -->
 
 
 
-<!-- # 25. Advanced Language Features
+<!-- # 25. Common Data Structures
+
+???
+
+
+
+
+
+___ -->
+
+
+
+
+
+<!-- # 26. Advanced Language Features
 
 ???
 
