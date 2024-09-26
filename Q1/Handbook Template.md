@@ -241,7 +241,8 @@ ___
 
 # 13. Random Generation
 
-* ``
+* `rand()` - Generates a pseudo-random number from 0 through RAND_MAX (At least 32767)
+* `srand()` - Seeds the random number generator and sets its initial state
 
 Note that you will have to include the C standard library to use the both random functions.
 
