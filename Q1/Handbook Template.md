@@ -186,7 +186,19 @@ ___
 * if statements
 * if...else statements
 
-These statements can also be nested within each other or use more than one within another.
+These statements can also be nested within each other or use more than one after another condition
+
+```C++
+if (condition1) {
+  if (condition) { // nested 
+
+  }
+} else if (condition2) { // if condition 1 is false, check condition 2
+
+} else {
+  
+}
+```
 ___
 # 8. Conditional Operators
 
@@ -204,6 +216,12 @@ ___
 * `||` - Either is true
 * `!` - Reverses result
 
+```C++
+if (3 == 5 && 4 == 4) return false;
+else return true;
+
+// returns true because 3 does not equal 5
+```
 ___
 # 10. Bitwise Operators
 
@@ -252,27 +270,26 @@ Note that you will have to include the C standard library to use the both random
 
 ___
 
-
-
-
-
 # 14. Looping Structures
 
-???
-
-
-
-
-
+* `while (condition)` - while condition is true (checks at the start of each iteration);
+* `for (initialization; testcondition; updateExpression)` - for loop that initializes a variable that will update after every iteration until the condition is false
+* `for (x : y)` - a for each loop that takes a variable from an array or vector until it reaches the last element
+* `do {...} while (condition)` - executes the body and then checks the condition, if true, then repeat
 ___
-
-
-
-
-
 # 15. Functions/Methods
 
-???
+Functions in C++ requires a type, name, and body. They are defined outside a class.
+
+Ex:
+```C++
+void myFunction() { // declaration (requires a return type & name)
+// definition (body to be executed)
+}
+```
+
+Methods are the exact same thing, except they are associated with an object.
+
 
 
 
