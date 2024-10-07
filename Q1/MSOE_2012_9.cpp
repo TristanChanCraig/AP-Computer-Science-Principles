@@ -12,19 +12,20 @@ int main() {
     int res = 0;
     bool last = false;
     for (int lcv = nums.length()-1; lcv >= 1; lcv--) {
-        int a = n.find(nums.substr(lcv,lcv+1));
-        cout << a << endl;
+        int a = n.find(nums.substr(lcv, 1));
         switch (a) {
             case 0:
                 res++;
                 break;
             case 1:
-                res+=5;
+                if (nums.substr(lcv-1, 1) == "I") {
+                    res += 4;
+                    last = true;
+                } else res += 5;
                 break;
             case 2:
-                if (nums.substr(lcv-1,lcv) == "I") {
+                if (nums.substr(lcv-1, 1) == "I") {
                     res += 9;
-                    lcv--;
                     last = true;
                 } else res += 10;
                 break;
@@ -32,13 +33,11 @@ int main() {
                 res += 50;
                 break;
             case 4:
-                if (nums.substr(lcv-1,lcv) == "X") {
+                if (nums.substr(lcv-1, 1) == "X") {
                     res += 90;
-                    lcv--;
                     last = true;
-                } else if (nums.substr(lcv-1,lcv) == "I") {
+                } else if (nums.substr(lcv-1, 1) == "I") {
                     res += 99;
-                    lcv--;
                     last = true;
                 } else res += 100;
                 break;
@@ -46,22 +45,22 @@ int main() {
                 res += 500;
                 break;
             case 6:
-                if (nums.substr(lcv-1,lcv) == "C") {
+                if (nums.substr(lcv-1, 1) == "C") {
                     res += 9;
-                    lcv--;
                     last = true;
-                } else if (nums.substr(lcv-1,lcv) == "X") {
+                } else if (nums.substr(lcv-1, 1) == "X") {
                     res += 9;
-                    lcv--;
                     last = true;
-                } else if (nums.substr(lcv-1,lcv) == "I") {
+                } else if (nums.substr(lcv-1, 1) == "I") {
                     res += 9;
-                    lcv--;
                     last = true;
                 } else res += 1000;
                 break;
+            default:
+                cout << "There is no numeral with that letter." << endl;
         }
     }
+    cout << res;
     if (last == false) {
         int a = n.find(nums.substr(0, 1));
         switch (a) {
