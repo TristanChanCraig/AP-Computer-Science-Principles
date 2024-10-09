@@ -9,9 +9,7 @@ double f(double x) {
 }
 
 int main() {
-    double x, a, b, n;
-    cout << "Enter x: ";
-    cin >> x;
+    double a, b, n;
     cout << "Enter a: ";
     cin >> a;
     cout << "Enter b: ";
@@ -20,14 +18,17 @@ int main() {
     cin >> n;
 
     double h = (b - a)/n;
-    double total = h * (f(a) + f(a + h) + f(a + 2 * h) + f(a + 3 * h));
+    double total = 0;
+    for (int i = 0; i < n; i++) {
+        total += f(a + i * h);
+    }
+    total *= h;
 
     printf("The approximate area under the curve is %.4f", total);
 }
 /*
-Enter x: 1
-Enter a: 2
-Enter b: 3
-Enter n: 4
-The approximate area under the curve is 0.0281
+Enter a: 0
+Enter b: 4
+Enter n: 8
+The approximate area under the curve is 0.5997
 */
