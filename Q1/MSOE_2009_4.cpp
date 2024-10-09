@@ -19,5 +19,15 @@ int main() {
     cout << "Enter n: ";
     cin >> n;
 
-    for (int k)
+    double h = (b - a)/n;
+    double total = h * (f(a) + f(a + h) + f(a + 2 * h) + f(a + 3 * h));
+
+    printf("The approximate area under the curve is %.4f", total);
 }
+/*
+Enter x: 1
+Enter a: 2
+Enter b: 3
+Enter n: 4
+The approximate area under the curve is 0.0281
+*/

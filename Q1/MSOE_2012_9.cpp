@@ -60,7 +60,6 @@ int main() {
                 cout << "There is no numeral with that letter." << endl;
         }
     }
-    cout << res;
     if (last == false) {
         int a = n.find(nums.substr(0, 1));
         switch (a) {
@@ -89,3 +88,10 @@ int main() {
     }
     printf("The sum is %d", res);
 }
+/*
+Enter in the numerals: MCCLXXIII
+The sum is 1273
+
+Enter in the numerals: XC
+The sum is 90
+*/
