@@ -13,7 +13,7 @@ int main() {
     int cnt = 0;
     bool b = false;
     for (int lcv = 0; lcv < str1.length(); lcv++) {
-        if (str1.substr(lcv, lcv + str2.length()) == str2) {
+        if (str1.substr(lcv, str2.length()) == str2) {
             b = true;
             break;
         }
