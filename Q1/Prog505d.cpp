@@ -2,8 +2,25 @@
 #include <math.h>
 #include <stdio.h>
 #include <fstream>
+#include <vector>
 using namespace std;
 
+
+double mCnt = 0;
+double tuCnt = 0;
+double wCnt = 0;
+double thCnt = 0;
+double fCnt = 0;
+double saCnt = 0;
+ double suCnt = 0;
+
+double mAvg = 0;
+double tuAvg = 0;
+double wAvg = 0;
+double thAvg = 0;
+double fAvg = 0;
+double saAvg = 0;
+double suAvg = 0;
 class Prog505d {
     private:
         string first;
@@ -24,30 +41,21 @@ class Prog505d {
         double bD7;
         vector<double> avgs;
 
-        static double mCnt;
-        static double tuCnt;
-        static double wCnt;
-        static double thCnt;
-        static double fCnt;
-        static double saCnt;
-        static double suCnt;
-
-        static double mAvg;
-        static double tuAvg;
-        static double wAvg;
-        static double thAvg;
-        static double fAvg;
-        static double saAvg;
-        static double suAvg;
-
-        vector<int> dayHits;
-        vector<double> dayAvgs;
+        void calc() {
+            avgs.push_back((int)((hD1 / bD1) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD2 / bD2) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD3 / bD3) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD4 / bD4) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD5 / bD5) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD6 / bD6) * 1000) / 1000.000f);
+            avgs.push_back((int)((hD7 / bD7) * 1000) / 1000.000f);
+        }
     public:
-        Prog505d(string f, string l, double su, double bSu, double m, 
+        Prog505d(string fi, string la, double su, double bSu, double m, 
         double bM, double tu, double bTu, double w, double bW, double th, 
         double bTh, double f, double bF, double sa, double bSa) {
-            first = f;
-            last = l;
+            first = fi;
+            last = la;
             hD1 = su;
             hD2 = m;
             hD3 = tu;
@@ -78,20 +86,11 @@ class Prog505d {
             fAvg += f;
             saAvg += sa;
             suAvg += su;
+            calc();
         }
 
         void toString() {
-            printf("%s %s\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\n", first, last, avgs.at(0), avgs.at(1), avgs.at(2), avgs.at(3), avgs.at(4), avgs.at(5), avgs.at(6)); 
-        }
-
-        void calc() {
-            avgs.push_back(bD1 / hD1);
-            avgs.push_back(bD2 / hD2);
-            avgs.push_back(bD3 / hD3);
-            avgs.push_back(bD4 / hD4);
-            avgs.push_back(bD5 / hD5);
-            avgs.push_back(bD6 / hD6);
-            avgs.push_back(bD7 / hD7);
+            cout << first << " " << last << "\t" << avgs[0] << "\t" << avgs[1] << "\t"<< avgs[2] << "\t"<< avgs[3] << "\t"<< avgs[4] << "\t"<< avgs[5] << "\t"<< avgs[6] << endl;
         }
         
         void calc2() {
@@ -104,21 +103,20 @@ class Prog505d {
             suAvg /= suCnt;
         }
 
-        double getAvgs { return dayAvgs; }
-        int getHits { return dayHits; }
-
 };
 
 int main() {
-    fstream myfile("/workspaces/AP-Computer-Science-Principles/Q1/data/prog505d.txt", ios_base::in) {
-        string f, l;
-        double a, aa, b, bb, c, cc, d, dd, e, ee, f, ff, g, gg;
-        myfile >> f >> l >> a >> aa >> b >> bb >> c >> cc >> d >> dd >> e >> ee >> f >> ff >> g >> gg;
-        Prog505d p = new Prog505d(f, l, a, aa, b, bb, c, cc, d, dd, e, ee, f, ff, g, gg);
-        p.calc();
+    vector<Prog505d> vec;
+    ifstream myfile("/workspaces/AP-Computer-Science-Principles/Q1/data/prog505d.txt");
+    
+    string fi, la;
+    double a, aa, b, bb, c, cc, d, dd, e, ee, f, ff, g, gg;
+    while (myfile >> fi) {
+        myfile >> la >> a >> aa >> b >> bb >> c >> cc >> d >> dd >> e >> ee >> f >> ff >> g >> gg;
+        Prog505d p = Prog505d(fi, la, a, aa, b, bb, c, cc, d, dd, e, ee, f, ff, g, gg);
         p.toString();
     }
 
-    p.calc2();
+    
 
 }

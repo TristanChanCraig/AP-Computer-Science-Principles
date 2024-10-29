@@ -1,1 +1,1 @@
- 
+vector<double> avgs;
