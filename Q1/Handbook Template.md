@@ -36,6 +36,7 @@ ___
 - [16. Elementary Data Structures](#16-elementary-data-structures)
   - [16.1 Arrays/Lists](#161-arrayslists)
   - [16.2 Matrices](#162-matrices)
+  - [16.3 Vectors](#163-vectors)
 - [References](#references)
 
 <!-- 
@@ -288,13 +289,18 @@ void myFunction() { // declaration (requires a return type & name)
 }
 ```
 
-Methods are the exact same thing, except they are associated with an object.
+Methods are the exact same thing, except they are associated with an object or class, just different names.
 
+Some functions/methods have parameters they take in that they use to do something with it, such as return it or print something.
 
+Ex:
+```C++
+int myFunction2(int x) { 
+    return x*2;
+}
+```
 
-
-
-
+If you have methods in a class, they can access that private variable without needing to take it in as a parameter.
 ___
 
 
@@ -303,15 +309,15 @@ ___
 
 # 16. Elementary Data Structures
 
-???
+Elementary Data Structues are a really simple list of values that are stored in the memory, either allocated by the position they are added in or allocated randomly.
 
-
+There are many data structures in C++ such as tuples, stacks, queues, linked lists, and heaps. However, the easiest ones to use are:
 
 
 
 ## 16.1 Arrays/Lists
 
-???
+* `Arrays` - A fixed size that declare a set type and can be stored.
 
 
 
@@ -320,11 +326,12 @@ ___
 
 ## 16.2 Matrices
 
-???
+* `Matrices` - Essentially a two-dimensional array (Array inside arrays) but instead of being only linear, it goes in both directions.
+
+## 16.3 Vectors
 
 
-
-
+* `Vectors` - Like arrays, but are dynamic and can be resized.
 
 ___
 
