@@ -92,18 +92,18 @@ class Prog505d {
         void toString() {
             cout << first << " " << last << "\t" << avgs[0] << "\t" << avgs[1] << "\t"<< avgs[2] << "\t"<< avgs[3] << "\t"<< avgs[4] << "\t"<< avgs[5] << "\t"<< avgs[6] << endl;
         }
-        
-        void calc2() {
-            mAvg /= mCnt;
-            tuAvg /= tuCnt;
-            wAvg /= wCnt;
-            thAvg /= thCnt;
-            fAvg /= fCnt;
-            saAvg /= saCnt;
-            suAvg /= suCnt;
-        }
 
 };
+
+void calc2() {
+    mAvg /= mCnt;
+    tuAvg /= tuCnt;
+    wAvg /= wCnt;
+    thAvg /= thCnt;
+    fAvg /= fCnt;
+    saAvg /= saCnt;
+    suAvg /= suCnt;
+}
 
 int main() {
     vector<Prog505d> vec;
@@ -117,6 +117,31 @@ int main() {
         p.toString();
     }
 
-    
+    calc2();
+
+    cout << "Monday\t\t" << mCnt << "\t" << mAvg << endl;
+    cout << "Tuesday\t\t" << tuCnt << "\t" << tuAvg << endl;
+    cout << "Wednesday\t" << wCnt << "\t" << wAvg << endl;
+    cout << "Thursday\t" << thCnt << "\t" << thAvg << endl;
+    cout << "Friday\t\t" << fCnt << "\t" << fAvg << endl;
+    cout << "Saturday\t" << saCnt << "\t" << saAvg << endl;
+    cout << "Sunday\t\t" << suCnt << "\t" << suAvg << endl;
 
 }
+/*
+Fred Sluggo     0.5     0.25    0.333   0.25    0       0       1
+Lydia Crusher   0.666   0.666   0.8     0.4     0.25    1       0.25
+Braeden Boomer  1       0.5     0.625   0.5     0.2     0.333   0
+Noah Niller     0.333   0.571   0.333   0.75    0.5     0.333   0.285
+Ruben Romper    0       0.333   0.5     0.4     0.285   0.375   0
+Lisa Longball   1       0.5     0.714   0.25    0.75    0.5     0.2
+Claire Corner   0.25    0.666   0.375   0.444   0.8     0.333   0.2
+Jared Just      1       0.5     0.4     0.285   0.125   1       0.333
+Monday          37      0.513514
+Tuesday         46      0.521739
+Wednesday       48      0.395833
+Thursday        45      0.355556
+Friday          38      0.394737
+Saturday        37      0.324324
+Sunday          17      0.470588
+*/
