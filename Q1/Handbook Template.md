@@ -319,8 +319,13 @@ There are many data structures in C++ such as tuples, stacks, queues, linked lis
 
 * `Arrays` - A fixed size that declare a set type and can be stored.
 
+To declare an array, add brackets after the name.
 
-
+Ex:
+```C++
+int myArr[5]; // declaration
+int myArr2[5] = {1, 2, 3, 4, 5}; // declaration with values inserted
+```
 
 
 
@@ -328,11 +333,34 @@ There are many data structures in C++ such as tuples, stacks, queues, linked lis
 
 * `Matrices` - Essentially a two-dimensional array (Array inside arrays) but instead of being only linear, it goes in both directions.
 
+To declare an array, add two sets of brackets after the name.
+
+Ex:
+```C++
+int myArr[3][5]; // declaration
+int myArr2[3][5] = {
+  {1, 2, 3, 4, 5},
+  {6, 7, 8, 9, 10},
+  {11, 12, 13, 14, 15}
+}; // declaration with values inserted
+```
+
+More dimensions can be added but at most, only 2 will suffice.
 ## 16.3 Vectors
 
 
 * `Vectors` - Like arrays, but are dynamic and can be resized.
 
+To use an array, vector would have to be imported from the library
+
+Ex:
+```C++
+#include <vector> // import from library
+
+vector<int> myVector; // declaration
+vector<int> myVector2 = {1, 2, 3, 4, 5}; // declaration with values inserted
+```
+Note that the size will not have to be declared unlike arrays as it is resizable.
 ___
 
 

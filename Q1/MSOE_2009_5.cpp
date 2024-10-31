@@ -8,9 +8,8 @@ bool isPrime(int num) {
     else if (num % 2 == 0) return false;
     else {
         int cnt = 0;
-        for (int i = 1; i <= num; i+=2) {
-            if (num % i == 0) cnt++;
-            if (cnt > 2) return false;
+        for (int i = 3; i < num; i+=2) {
+            if (num % i == 0) return false;
         }
         return true;
     }
