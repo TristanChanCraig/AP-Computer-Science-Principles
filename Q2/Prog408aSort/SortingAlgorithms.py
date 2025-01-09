@@ -11,3 +11,6 @@ class Student:
     
     def getId(self):
         return self.id
+    
+    def setScore(self, num):
+        self.score *= num
