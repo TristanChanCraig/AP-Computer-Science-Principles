@@ -21,30 +21,30 @@ class TestQuicksort(unittest.TestCase):
         expected_output = [1, 2, 3, 4, 5]
         self.assertEqual(Quicksort.sort(input_arr), expected_output)
 
-    def test_empty_list():
+    def test_empty_list(self):
         input = []
         expected_output = []
-        assert Quicksort.sort(input) == expected_output
+        self.assertEqual(Quicksort.sort(input), expected_output)
 
-    def test_single_element():
+    def test_single_element(self):
         input = [1]
         expected_output = [1]
-        assert Quicksort.sort(input) == expected_output
+        self.assertEqual(Quicksort.sort(input), expected_output)
 
-    def test_identical_elements():
+    def test_identical_elements(self):
         input = [5, 5, 5, 5]
         expected_output = [5, 5, 5, 5]
-        assert Quicksort.sort(input) == expected_output
+        self.assertEqual(Quicksort.sort(input), expected_output)
 
-    def test_negative_numbers():
+    def test_negative_numbers(self):
         input = [-3, -1, -4, -2]
         expected_output = [-4, -3, -2, -1]
-        assert Quicksort.sort(input) == expected_output
+        self.assertEqual(Quicksort.sort(input), expected_output)
 
-    def test_mixed_types():
+    def test_mixed_types(self):
         input = [3.2, 1.5, 4.8, 2.1]
         expected_output = [1.5, 2.1, 3.2, 4.8]
-        assert Quicksort.sort(input) == expected_output
+        self.assertEqual(Quicksort.sort(input), expected_output)
 
     def test_performance_large_dataset(self):
         input_arr = generate_large_list()
@@ -57,3 +57,17 @@ class TestQuicksort(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestQuicksort)
     unittest.TextTestRunner(verbosity=0).run(suite)
+
+'''
+__main__.TestQuicksort.test_empty_list: 0.000016
+__main__.TestQuicksort.test_identical_elements: 0.000030
+__main__.TestQuicksort.test_mixed_types: 0.000016
+__main__.TestQuicksort.test_negative_numbers: 0.000014
+__main__.TestQuicksort.test_normal_case: 0.000015
+__main__.TestQuicksort.test_performance_large_dataset: 4.230693
+__main__.TestQuicksort.test_single_element: 0.000018
+----------------------------------------------------------------------
+Ran 7 tests in 4.231s
+
+OK
+'''

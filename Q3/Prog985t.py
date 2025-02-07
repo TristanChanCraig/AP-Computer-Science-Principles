@@ -1,42 +1,35 @@
 class MergeSort:
     @staticmethod
-    def merge(arr, l, m, r):
-        n1 = m - l + 1
-        n2 = r - m
-        L = [0] * (n1)
-        R = [0] * (n2)
-        for i in range(0, n1):
-            L[i] = arr[l + i]
-        for j in range(0, n2):
-            R[j] = arr[m + 1 + j]
+    def sort(arr):
+        if len(arr) > 1:
+            mid = len(arr) // 2
+            l = arr[:mid]
+            r = arr[mid:]
+            MergeSort.sort(l)
+            MergeSort.sort(r)
+            MergeSort.merge(arr, l, r)
+
+    @staticmethod
+    def merge(arr, l, r):
         i = 0
         j = 0
-        k = l
-        while i < n1 and j < n2:
-            if L[i] <= R[j]:
-                arr[k] = L[i]
+        k = 0
+
+        while i < len(l) and j < len(r):
+            if l[i] < r[j]:
+                arr[k] = l[i]
                 i += 1
             else:
-                arr[k] = R[j]
+                arr[k] = r[j]
                 j += 1
             k += 1
-        while i < n1:
-            arr[k] = L[i]
+
+        while i < len(l):
+            arr[k] = l[i]
             i += 1
             k += 1
-        while j < n2:
-            arr[k] = R[j]
+            
+        while j < len(r):
+            arr[k] = r[j]
             j += 1
             k += 1
-
-    @staticmethod
-    def sort(arr, l, r):
-        if l < r:
-            m = l+(r-l)//2
-            MergeSort.sort(arr, l, m)
-            MergeSort.sort(arr, m+1, r)
-            MergeSort.merge(arr, l, m, r)
-
-    @staticmethod
-    def sort(arr):
-        MergeSort.sort(arr, 0, len(arr))
