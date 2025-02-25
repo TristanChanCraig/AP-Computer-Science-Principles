@@ -10,6 +10,15 @@ vector<double> costs;
 bool execute(string choice) {
     if (choice == "E") {
         return false;
+    } else if (choice == "B") {
+        for (int i = 0; i < list.size(); i++) {
+            cout << i << ": " << list[i] << endl;
+        }
+        int index;
+        printf("Enter the item number you want to mark as bought: ");
+        cin >> index;
+        list[index] = list[index] + " (Bought)";
+        cout << endl;
     } else if (choice == "A") {
         string temp;
         string item;
@@ -35,7 +44,7 @@ bool execute(string choice) {
         cout << endl;
     } else if (choice == "C") {
         double total;
-        for (int i = 0; i < costs.size(); i++) total += costs[i];
+        for (int i = 0; i < costs.size(); i++) if (list[i].find("(Bought)") == -1) total += costs[i];
         cout << "The total cost of the grocery list without taxes is: $" << total << endl << endl;
     } else cout << "Invalid Choice!" << endl << endl;
     return true;
@@ -49,7 +58,7 @@ int main() {
             cout << i << ": " << list[i] << " " << costs[i] << endl;
         }
         string choice;
-        printf("E for exit, A for add, R for remove, or C to calculate the total cost: ");
+        printf("E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: ");
         cin >> choice;
 
         run = execute(choice);
@@ -58,62 +67,65 @@ int main() {
 }
 /*
 Grocery List: 
-E for exit, A for add, R for remove, or C to calculate the total cost: A
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: A
 Enter the item: Banana
-Enter the cost: 2.99
+Enter the cost: 1.99
 
 Grocery List: 
-0: Banana 2.99
-E for exit, A for add, R for remove, or C to calculate the total cost: A
-Enter the item: Fruit Snacks
-Enter the cost: 7.99
+0: Banana 1.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: A
+Enter the item: Apple
+Enter the cost: 0.99
 
 Grocery List: 
-0: Banana 2.99
-1: Fruit Snacks 7.99
-E for exit, A for add, R for remove, or C to calculate the total cost: A
-Enter the item: Grapes
+0: Banana 1.99
+1: Apple 0.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: A
+Enter the item: Bread
 Enter the cost: 4.99
 
 Grocery List: 
-0: Banana 2.99
-1: Fruit Snacks 7.99
-2: Grapes 4.99
-E for exit, A for add, R for remove, or C to calculate the total cost: Chicken
-Invalid Choice!
+0: Banana 1.99
+1: Apple 0.99
+2: Bread 4.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: B
+0: Banana
+1: Apple
+2: Bread
+Enter the item number you want to mark as bought: 2
 
 Grocery List: 
-0: Banana 2.99
-1: Fruit Snacks 7.99
-2: Grapes 4.99
-E for exit, A for add, R for remove, or C to calculate the total cost: A
+0: Banana 1.99
+1: Apple 0.99
+2: Bread (Bought) 4.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: A
 Enter the item: Chicken
-Enter the cost: 20.79
+Enter the cost: 12.99
 
 Grocery List: 
-0: Banana 2.99
-1: Fruit Snacks 7.99
-2: Grapes 4.99
-3: Chicken 20.79
-E for exit, A for add, R for remove, or C to calculate the total cost: R
-0: Banana $2.99
-1: Fruit Snacks $7.99
-2: Grapes $4.99
-3: Chicken $20.79
+0: Banana 1.99
+1: Apple 0.99
+2: Bread (Bought) 4.99
+3: Chicken 12.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: R
+0: Banana $1.99
+1: Apple $0.99
+2: Bread (Bought) $4.99
+3: Chicken $12.99
 
-Enter the item number you want to remove: 1
-
-Grocery List: 
-0: Banana 2.99
-1: Grapes 4.99
-2: Chicken 20.79
-E for exit, A for add, R for remove, or C to calculate the total cost: C
-The total cost of the grocery list without taxes is: $28.77
+Enter the item number you want to remove: 0
 
 Grocery List: 
-0: Banana 2.99
-1: Grapes 4.99
-2: Chicken 20.79
-E for exit, A for add, R for remove, or C to calculate the total cost: E
+0: Apple 0.99
+1: Bread (Bought) 4.99
+2: Chicken 12.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: C
+The total cost of the grocery list without taxes is: $13.98
+
+Grocery List: 
+0: Apple 0.99
+1: Bread (Bought) 4.99
+2: Chicken 12.99
+E for exit, A for add, R for remove, B for bought, or C to calculate the total cost: E
 Successfully Exited
 */
