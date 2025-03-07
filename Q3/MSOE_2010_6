@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<double> xcoords;
+    vector<double> ycoords;
+    cout << "Number of vertices: ";
+    int numVert = 0;
+    cin >> numVert;
+
+    for (size_t i = 0; i < numVert; i++)
+    {
+        cout << "X" << i+1 << ": ";
+        double x;
+        cin >> x;
+        cout << "Y" << i+1 << ": ";
+        double x;
+        cin >> x;
+        cout << endl;
+        xcoords.push_back(x);
+        ycoords.push_back(y);
+    }
+
+    double area;
+    for (size_t i = 0; i < numVert-1; i++)
+    {
+        area += (xcoords[i] * ycoords[i+1]) - (xcoords[i+1] * ycoords[i]);
+    }
+    area += (xcoords[numVert-1] * ycoords[0) - (xcoords[0] * ycoords[numVert]);
+    cout << "The area of the polygon is: " << area;
+}

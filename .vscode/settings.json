@@ -44,7 +44,8 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "msoe_2010_6": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
